@@ -1,0 +1,31 @@
+<div *ngIf="game" class="cart-item bg-3 d-flex align-items-center">
+  <div class="cart-item-game d-flex">
+    <div class="cart-item-game-img">
+      <shared-lazy-image
+        class="d-flex justify-content-center align-items-center h-100"
+        [image]="game | gameImage"
+        [name]="game.name"
+      ></shared-lazy-image>
+    </div>
+    <div class="cart-item-game-data d-flex flex-column">
+      <div class="subtitle1 primary">{{ game.name | titlecase }}</div>
+      <cart-counter class="d-flex" [item]="item"></cart-counter>
+      <div class="text other no-select delete" (click)="deleteCartItem(item.id)">
+        Remove
+      </div>
+    </div>
+  </div>
+  <div class="cart-item-price d-flex flex-column align-items-end">
+    <div *ngIf="game.discount" class="d-flex discount">
+      <div class="text other">
+        <s>
+          {{ game.price * item.amount | currency }}
+        </s>
+      </div>
+      <div class="warn text bold">-{{ game.discount }}%</div>
+    </div>
+    <div class="subtitle1 bold">
+      {{ game | gamePrice : item.amount | currency }}
+    </div>
+  </div>
+</div>

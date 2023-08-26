@@ -1,0 +1,17 @@
+<div class="summary bg-3 d-flex flex-column">
+  <div class="d-flex justify-content-between text">
+    <div class="summary-title">Precio:</div>
+    <div>{{ cart.price | currency }}</div>
+  </div>
+  <div class="d-flex justify-content-between text">
+    <div class="summary-title">Descuento:</div>
+    <div>{{ cart.discount | currency }}</div>
+  </div>
+  <div class="total d-flex justify-content-between subtitle1 bold">
+    <div class="summary-title">Total:</div>
+    <div>{{ cart.total | currency }}</div>
+  </div>
+  <shared-button *ngIf="cart.items.length" type="gradient"
+    >Comprar</shared-button
+  >
+</div>

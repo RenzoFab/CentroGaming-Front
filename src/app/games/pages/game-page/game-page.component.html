@@ -1,0 +1,62 @@
+<ng-container *ngIf="game">
+  <div class="game-image">
+    <shared-lazy-image
+      [image]="game | gameImage"
+      [name]="game.name"
+    ></shared-lazy-image>
+  </div>
+  <div class="container">
+    <div class="row game-sale pad-50">
+      <div class="col-7 h-100">
+        <shared-lazy-image [image]="game | gameLogo" [name]="game.name">
+        </shared-lazy-image>
+      </div>
+
+      <games-game-price [game]="game" class="col-5 game-sale-price">
+      </games-game-price>
+    </div>
+  </div>
+  <div class="game-about pad-50 bg-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-7 game-about-description d-flex flex-column">
+          <h2 class="bold">Acerca del juego</h2>
+          <p>{{ game.description }}</p>
+        </div>
+        <div
+          class="col-5 game-about-other d-flex flex-column"
+          style="gap: 20px"
+        >
+          <div class="d-flex flex-column align-items-center" style="gap: 20px">
+            <div class="subtitle1 bold">Plataformas</div>
+            <div class="d-flex" style="gap: 20px">
+              <img
+                *ngFor="let platform of game.platforms.split(',')"
+                [src]="platform | gamePlatform"
+                [alt]="platform"
+              />
+            </div>
+          </div>
+          <div class="d-flex" style="gap: 20px">
+            <div class="subtitle1 bold" style="flex: 1">Fecha:</div>
+            <div class="subtitle2 text-end primary" style="flex: 1">
+              {{ game.date }}
+            </div>
+          </div>
+          <div class="d-flex" style="gap: 20px">
+            <div class="subtitle1 bold" style="flex: 1">Desarrollador:</div>
+            <div class="subtitle2 text-end primary" style="flex: 1">
+              {{ game.developer }}
+            </div>
+          </div>
+          <div class="d-flex" style="gap: 20px">
+            <div class="subtitle1 bold" style="flex: 1">Producción:</div>
+            <div class="subtitle2 text-end primary" style="flex: 1">
+              {{ game.production }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

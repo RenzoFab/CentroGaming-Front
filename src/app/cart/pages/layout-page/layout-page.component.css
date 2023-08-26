@@ -1,0 +1,18 @@
+.cart {
+  gap: 20px;
+}
+.cart-items {
+  gap: 10px;
+  flex: 1;
+}
+
+.summary {
+  top: 120px;
+  gap: 20px;
+
+}
+
+.noItems{
+  padding: 10px;
+  text-align: center;
+}

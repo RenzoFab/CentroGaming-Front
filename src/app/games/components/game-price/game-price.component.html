@@ -1,0 +1,26 @@
+<div
+  class="game bg-2 d-flex flex-column justify-content-center align-items-center h-100"
+>
+  <h2 class="bold game-name primary">
+    {{ game.name }}
+  </h2>
+  <div
+    class="game-price d-flex flex-column justify-content-center align-items-center"
+  >
+    <p class="subtitle1 bold">Precio:</p>
+    <div class="d-flex align-items-center" style="gap: 20px">
+      <div *ngIf="game.discount" class="d-flex" style="gap: 5px">
+        <div class="subtitle2 other">
+          <s>{{ game.price | currency }}</s>
+        </div>
+        <div class="subtitle2 bold warn">-{{ game.discount }}%</div>
+      </div>
+      <h1 class="bold secondary">{{ game | gamePrice | currency }}</h1>
+    </div>
+  </div>
+  <shared-button type="gradient" (click)="addItem(game)">Agregar al carrito</shared-button>
+  <div class="game-stock d-flex justify-content-center align-items-center">
+    <p class="subtitle1 bold">Stock:</p>
+    <p class="subtitle2">{{ game.stock }}</p>
+  </div>
+</div>

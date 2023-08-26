@@ -1,0 +1,25 @@
+.button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.gradient {
+  background: var(--gradient);
+  color: var(--white);
+}
+.warn {
+  background: var(--warn);
+  color: var(--neutrals);
+}
+
+.cursorInactive {
+  pointer-events: none;
+  cursor: default;
+}

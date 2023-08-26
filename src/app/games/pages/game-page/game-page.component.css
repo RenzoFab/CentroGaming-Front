@@ -1,0 +1,13 @@
+.game-image {
+  height: 70vh;
+}
+
+.game-sale {
+  height: 450px;
+}
+
+.game-about-description,
+.game-about-other {
+  padding: 20px;
+  gap: 20px;
+}

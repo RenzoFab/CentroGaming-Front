@@ -1,0 +1,41 @@
+<div class="counter d-flex align-items-center justify-content-between">
+  <div class="counter-number d-flex justify-content-center align-items-center no-select">
+    {{ item.amount }}
+  </div>
+  <div class="counter-action d-flex flex-column">
+    <div
+      class="counter-arrow d-flex justify-content-center align-items-center"
+      (click)="updateAmount(1)"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="8"
+        viewBox="0 0 8 5"
+        fill="none"
+      >
+        <path
+          d="M4.37788 0.227898L7.58334 3.89186C7.96164 4.32295 7.65419 5 7.08007 5H0.669143C0.540654 5.00011 0.414857 4.96318 0.306816 4.89364C0.198775 4.82409 0.11307 4.72488 0.0599649 4.60788C0.00685964 4.49088 -0.0113951 4.36105 0.0073871 4.23394C0.0261693 4.10683 0.0811921 3.98783 0.165866 3.89119L3.37133 0.228566C3.43406 0.156778 3.51143 0.0992411 3.59823 0.0598186C3.68504 0.0203961 3.77927 -5.87429e-08 3.8746 -5.87429e-08C3.96994 -5.87429e-08 4.06417 0.0203961 4.15098 0.0598186C4.23778 0.0992411 4.31515 0.156778 4.37788 0.228566V0.227898Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+    <div
+      class="counter-arrow d-flex justify-content-center align-items-center"
+      (click)="updateAmount(-1)"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="8"
+        viewBox="0 0 8 5"
+        fill="none"
+      >
+        <path
+          d="M3.37212 4.7721L0.166656 1.10814C-0.211636 0.677051 0.0958102 2.4576e-07 0.669933 2.4576e-07H7.08086C7.20935 -0.000109918 7.33514 0.0368186 7.44318 0.106364C7.55123 0.175909 7.63693 0.275122 7.69004 0.392123C7.74314 0.509124 7.7614 0.638953 7.74261 0.766061C7.72383 0.89317 7.66881 1.01217 7.58413 1.10881L4.37867 4.77143C4.31594 4.84322 4.23857 4.90076 4.15177 4.94018C4.06496 4.9796 3.97073 5 3.8754 5C3.78006 5 3.68583 4.9796 3.59902 4.94018C3.51222 4.90076 3.43485 4.84322 3.37212 4.77143V4.7721Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container pad-50">
+  <div class="row">
+    <div class="cart col-7 d-flex flex-column">
+      <h2>Cesta</h2>
+      <div class="cart-items d-flex flex-column">
+        <ng-container *ngIf="cart.items.length; else noItems">
+          <cart-item *ngFor="let item of cart.items" [item]="item"></cart-item>
+        </ng-container>
+        <ng-template #noItems>
+          <div
+            class="bg-3 noItems h-100 d-flex flex justify-content-center align-items-center"
+          >
+            No hay items en la cesta
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="summary d-flex flex-column position-sticky">
+        <h2>Resumen</h2>
+        <cart-summary [cart]="cart"></cart-summary>
+      </div>
+    </div>
+  </div>
+</div>

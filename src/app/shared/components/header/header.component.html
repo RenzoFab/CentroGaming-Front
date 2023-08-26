@@ -1,0 +1,42 @@
+<div class="header bg-2 white d-flex align-items-center">
+  <div class="logo d-flex" routerLink="/home">
+    <img src="assets/logo.svg" alt="" />
+  </div>
+
+  <div class="navbar d-flex align-items-center">
+    <div
+      class="navbar-item d-flex"
+      routerLink="/home"
+      routerLinkActive="primary"
+    >
+      Inicio
+    </div>
+    <div
+      class="navbar-item d-flex"
+      routerLink="/games"
+      routerLinkActive="primary"
+    >
+      Juegos
+    </div>
+  </div>
+  <shared-serch-box class="search"></shared-serch-box>
+  <div class="profile d-flex align-items-center">
+    <div class="profile-icon d-flex">
+      <img src="assets/user.svg" alt="" />
+    </div>
+    <div class="profile-icon" routerLink="/cart" routerLinkActive="primary">
+      <svg
+        width="35"
+        height="30"
+        viewBox="0 0 35 30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M32.0906 17.6554L34.9631 5.46791C35.1705 4.58795 34.4769 3.75 33.5411 3.75H9.6741L9.11714 1.12441C8.97835 0.469981 8.38117 0 7.6884 0H1.45833C0.652908 0 0 0.62959 0 1.40625V2.34375C0 3.12041 0.652908 3.75 1.45833 3.75H5.7047L9.97324 23.8731C8.95204 24.4395 8.26389 25.5013 8.26389 26.7188C8.26389 28.5309 9.78736 30 11.6667 30C13.546 30 15.0694 28.5309 15.0694 26.7188C15.0694 25.8004 14.6777 24.9706 14.0472 24.375H26.7861C26.1556 24.9706 25.7639 25.8004 25.7639 26.7188C25.7639 28.5309 27.2874 30 29.1667 30C31.046 30 32.5695 28.5309 32.5695 26.7188C32.5695 25.4196 31.7863 24.297 30.6506 23.7653L30.9858 22.3429C31.1932 21.4629 30.4996 20.625 29.5638 20.625H13.2536L12.8559 18.75H30.6686C31.3495 18.75 31.9398 18.2957 32.0906 17.6554Z"
+          fill="#ffffff"
+        />
+      </svg>
+    </div>
+  </div>
+</div>

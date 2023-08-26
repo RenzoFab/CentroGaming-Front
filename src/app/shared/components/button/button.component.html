@@ -1,0 +1,11 @@
+<div
+  class="button subtitle2"
+  [ngClass]="{
+    primary: type === 'primary',
+    gradient: type === 'gradient',
+    warn: type === 'warn',
+    cursorInactive: cursor === false
+  }"
+>
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,30 @@
+<div
+  *ngIf="game; else loader"
+  class="banner position-relative d-flex align-items-end"
+  [routerLink]="['/games', game.id]"
+>
+  <div class="background position-absolute w-100 h-100">
+    <shared-lazy-image [image]="game | gameImage" [name]="game.name">
+    </shared-lazy-image>
+    <div class="overlay position-absolute w-100 h-100"></div>
+  </div>
+  <div class="game container d-flex flex-column">
+    <h2 class="game-name">{{ game.name | titlecase }}</h2>
+    <div class="game-sale d-flex">
+      <div
+        *ngIf="game.discount"
+        class="bg-p black subtitle1 game-sale-discount bold d-flex justify-content-center align-items-center"
+      >
+        -{{ game.discount }}%
+      </div>
+      <h2>{{ game | gamePrice | currency }}</h2>
+    </div>
+  </div>
+</div>
+
+<ng-template #loader>
+  <shared-loading-spinner
+    class="banner d-flex justify-content-center align-items-center"
+  >
+  </shared-loading-spinner>
+</ng-template>

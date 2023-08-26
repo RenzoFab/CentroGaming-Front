@@ -1,0 +1,21 @@
+<div
+  class="game position-relative w-100 bg-black d-flex flex-column"
+  [routerLink]="['/games', game.id]"
+>
+  <div class="game-img">
+    <shared-lazy-image [image]="game | gameImage" [name]="game.name">
+    </shared-lazy-image>
+  </div>
+
+  <div class="game-info d-flex">
+    <div class="game-info-name subtitle2 bg-p19 text-start">
+      {{ game.name | titlecase }}
+    </div>
+    <div class="game-info-price subtitle2 text-end primary">
+      {{ game | gamePrice | currency }}
+    </div>
+  </div>
+  <div class="game-discount position-absolute bg-p black" *ngIf="game.discount">
+    <div class="subtitle1 bold">-{{ game.discount }}%</div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.list {
+  row-gap: 20px;
+}
+
+.genre {
+  padding: 10px 20px;
+  gap: 20px;
+  cursor: pointer;
+}

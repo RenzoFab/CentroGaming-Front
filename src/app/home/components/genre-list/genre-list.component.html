@@ -1,0 +1,11 @@
+<div class="row pad-50 list">
+  <h2>Géneros</h2>
+  <div *ngFor="let genre of genres" class="col-4">
+    <div class="d-flex align-items-center genre bg-black">
+      <img src="assets/genre.svg" [alt]="genre" />
+      <h3>
+        {{ genre | titlecase }}
+      </h3>
+    </div>
+  </div>
+</div>

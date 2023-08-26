@@ -1,0 +1,23 @@
+<div class="search position-relative d-flex align-items-center">
+  <input
+    #txtSearchInput
+    class="bg-shadow1 white n1"
+    type="text"
+    placeholder="Search"
+    (input)="onKeyPress(txtSearchInput.value)"
+    (blur)="onBlur()"
+    (focus)="onFocus()"
+  />
+  <div *ngIf="optionsVisible" class="options bg-shadow1 position-absolute">
+    <div
+      class="option"
+      *ngFor="let game of options"
+      (click)="txtSearchInput.value = ''; onSelectedOption(game.id)"
+    >
+      {{ game.name }}
+    </div>
+    <div *ngIf="!options.length && txtSearchInput.value" class="option">
+      No Hay opciones
+    </div>
+  </div>
+</div>

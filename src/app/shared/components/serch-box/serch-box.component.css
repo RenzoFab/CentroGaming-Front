@@ -1,0 +1,35 @@
+.search {
+  gap: 5px;
+  flex: 1;
+  border-radius: 8px;
+  border: 0;
+}
+
+.search input {
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+}
+
+.search input::placeholder {
+  color: var(--neutrals-3);
+}
+
+.search input:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.options {
+  top: 44px;
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: var(--primary);
+}

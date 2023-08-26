@@ -1,0 +1,25 @@
+.game * {
+  cursor: pointer;
+}
+.game {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.game-img{
+  height: 220px;
+}
+.game-info-name {
+  padding: 10px;
+  flex: 3;
+}
+
+.game-info-price {
+  padding: 10px;
+  flex: 1;
+}
+
+.game-discount {
+  padding: 2px 10px;
+  top: 20px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}

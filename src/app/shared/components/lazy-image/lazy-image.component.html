@@ -1,0 +1,10 @@
+<ng-container *ngIf="image && name">
+  <img
+    class="w-100 h-100 object-fit-cover"
+    [src]="image"
+    [alt]="name"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  />
+  <shared-loading-spinner class="d-flex justify-content-center align-items-center h-100" *ngIf="!hasLoaded"> </shared-loading-spinner>
+</ng-container>

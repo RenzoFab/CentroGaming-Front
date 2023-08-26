@@ -1,1 +1,216 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #c34beb;
+  --gradient: linear-gradient(90deg, #cf3eb9 0%, #843ee6 100%);
+  --other: #9593a7;
+  --white: #ffffff;
+  --black: #000000;
+  --warn: #fa3939;
+  --background-1: #090f14;
+  --background-2: #0d111b;
+  --background-3: #141d26;
+  --shadow-1: #2a2a2a;
+  --shadow-2: #161616;
+  --h1-regular38px: 400 38px / normal Montserrat;
+  --h1-bold38px: 700 38px / normal Montserrat;
+  --h2-regular30px: 400 30px / normal Montserrat;
+  --h2-bold30px: 700 30px / normal Montserrat;
+  --h3-regular24px: 400 24px / normal Montserrat;
+  --h3-bold24px: 700 24px / normal Montserrat;
+  --h4-regular20px: 400 20px / normal Montserrat;
+  --h4-bold20px: 700 20px / normal Montserrat;
+  --h5-regular18px: 400 18px / normal Montserrat;
+  --h5-bold18px: 700 18px / normal Montserrat;
+  --subtitle1-regular16px: 400 16px / normal Montserrat;
+  --subtitle1-bold16px: 700 16px / normal Montserrat;
+  --text-regular14px: 400 14px / normal Montserrat;
+  --text-bold14px: 700 14px / normal Montserrat;
+  --bodytext-regular14px: 400 14px/30.505px Montserrat;
+  --bodytext-bold14px: 700 14px/30.505px Montserrat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+h1,
+.h1 {
+  font: var(--h1-regular38px);
+}
+
+h1.bold,
+.h1.bold {
+  font: var(--h1-bold38px);
+}
+
+h2,
+.h2 {
+  font: var(--h2-regular30px);
+}
+
+h2.bold,
+.h2.bold {
+  font: var(--h2-bold30px);
+}
+
+h3,
+.h3 {
+  font: var(--h3-regular24px);
+}
+
+h3.bold,
+.h3.bold {
+  font: var(--h3-bold24px);
+}
+
+h4,
+.h4 {
+  font: var(--h4-regular20px);
+}
+
+h4.bold,
+.h4.bold {
+  font: var(--h4-bold20px);
+}
+
+h5,
+.h5 {
+  font: var(--h5-regular18px);
+}
+
+h5.bold,
+.h5.bold {
+  font: var(--h5-bold18px);
+}
+
+.subtitle1 {
+  font: var(--subtitle1-regular16px);
+}
+
+.subtitle1.bold {
+  font: var(--subtitle1-bold16px);
+}
+
+.text {
+  font: var(--text-regular14px);
+}
+
+.text.bold {
+  font: var(--text-bold14px);
+}
+
+p,
+.p {
+  font: var(--bodytext-regular14px);
+}
+
+p.bold,
+.p.bold {
+  font: var(--bodytext-bold14px);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+.subtitle1,
+.text,
+p,
+.p {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.bg-p {
+  background-color: var(--primary);
+}
+
+.gradient {
+  columns: var(--gradient);
+}
+
+.bg-gradient {
+  background-color: var(--gradient);
+}
+
+.other {
+  color: var(--other);
+}
+
+.bg-other {
+  background-color: var(--other);
+}
+
+.white {
+  color: var(--white);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.warn {
+  color: var(--warn);
+}
+
+.bg-warn {
+  background-color: var(--warn);
+}
+
+.bg-1 {
+  background-color: var(--background-1);
+}
+
+.bg-2 {
+  background-color: var(--background-2);
+}
+
+.bg-3 {
+  background-color: var(--background-3);
+}
+
+.shadow1 {
+  color: var(--shadow-1);
+}
+
+.bg-shadow1 {
+  background-color: var(--shadow-1);
+}
+
+.shadow2 {
+  color: var(--shadow-2);
+}
+
+.bg-shadow2 {
+  background-color: var(--shadow-2);
+}
+
+.pad-50 {
+  padding: 50px 0;
+}
+
+.no-select {
+  user-select: none;
+}

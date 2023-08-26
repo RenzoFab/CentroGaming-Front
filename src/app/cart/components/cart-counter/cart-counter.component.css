@@ -1,0 +1,24 @@
+.counter {
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  gap: 5px;
+  width: 70px;
+}
+.counter-number {
+  flex: 1;
+  text-align: center;
+}
+.counter-arrow {
+  padding: 2px;
+  cursor: pointer;
+}
+.counter-arrow * {
+  cursor: pointer;
+}
+
+.counter-arrow:hover svg path {
+  fill: var(--primary);
+}
+
+

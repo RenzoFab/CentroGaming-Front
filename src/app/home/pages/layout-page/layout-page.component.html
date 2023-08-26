@@ -1,0 +1,33 @@
+<home-banner [game]="gameFav"></home-banner>
+
+<div class="container">
+  <div class="tendencias pad-50">
+    <h2>Tendencias</h2>
+    <div class="row">
+      <shared-game-card
+        class="col-4"
+        *ngFor="let game of gamesTrend"
+        [game]="game"
+      >
+      </shared-game-card>
+    </div>
+  </div>
+</div>
+<div class="bg-3">
+  <div class="container">
+    <home-genre-list></home-genre-list>
+  </div>
+</div>
+<div class="container">
+  <div class="tendencias pad-50">
+    <h2>Actuales</h2>
+    <div class="row">
+      <shared-game-card
+        class="col-4"
+        *ngFor="let game of gamesActual"
+        [game]="game"
+      >
+      </shared-game-card>
+    </div>
+  </div>
+</div>
