@@ -6,5 +6,9 @@
     (load)="onLoad()"
     [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
   />
-  <shared-loading-spinner class="d-flex justify-content-center align-items-center h-100" *ngIf="!hasLoaded"> </shared-loading-spinner>
+  <shared-loading-spinner
+    class="d-flex justify-content-center align-items-center h-100"
+    *ngIf="!hasLoaded"
+  >
+  </shared-loading-spinner>
 </ng-container>

@@ -10,8 +10,13 @@
     <div class="cart-item-game-data d-flex flex-column">
       <div class="subtitle1 primary">{{ game.name | titlecase }}</div>
       <cart-counter class="d-flex" [item]="item"></cart-counter>
-      <div class="text other no-select delete" (click)="deleteCartItem(item.id)">
-        Remove
+      <div class="d-flex">
+        <div
+          class="text other no-select delete"
+          (click)="deleteCartItem(item.id)"
+        >
+          Remove
+        </div>
       </div>
     </div>
   </div>
