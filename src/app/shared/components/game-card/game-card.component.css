@@ -5,12 +5,15 @@
   cursor: pointer;
   margin-bottom: 20px;
 }
-.game-img{
+.game-img {
   height: 220px;
 }
 .game-info-name {
   padding: 10px;
   flex: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .game-info-price {

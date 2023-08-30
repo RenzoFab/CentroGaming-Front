@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, of, map } from 'rxjs';
 
 import { environments } from 'src/environments/environments';
-import { Game } from '../interfaces/game.interface';
+import { Game, RespGame } from '../interfaces/game.interface';
 
 @Injectable({ providedIn: 'root' })
 export class GameService {
@@ -11,17 +11,28 @@ export class GameService {
 
   constructor(private http: HttpClient) {}
 
-  getGames(): Observable<Game[]> {
+  getGames(): Observable<Game[] | undefined> {
     const url = `${this.baseUrl}/games`;
-    return this.http.get<Game[]>(url);
+    return this.http.get<RespGame>(url).pipe(
+      map((res) => res.data as Game[]),
+      catchError(() => of(undefined))
+    );
   }
 
   getGame(id: string): Observable<Game | undefined> {
     const url = `${this.baseUrl}/games/${id}`;
-    return this.http.get<Game>(url).pipe(catchError(() => of(undefined)));
+    return this.http.get<RespGame>(url).pipe(
+      map((res) => res.data as Game),
+      catchError(() => of(undefined))
+    );
   }
 
-  getSuggestions(query: string): Observable<Game[]> {
-    return this.http.get<Game[]>(`${this.baseUrl}/games?q=${query}&_limit=6`);
+  getSuggestions(query: string): Observable<Game[] | undefined> {
+    return this.http
+      .get<RespGame>(`${this.baseUrl}/games?q=${query}&limit=6`)
+      .pipe(
+        map((res) => res.data as Game[]),
+        catchError(() => of(undefined))
+      );
   }
 }

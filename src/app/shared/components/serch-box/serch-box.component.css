@@ -33,3 +33,12 @@
 .option:hover {
   background-color: var(--primary);
 }
+
+.spinner {
+  right: 10px;
+}
+.loading {
+  padding: 10px;
+  gap: 10px;
+  cursor: default;
+}

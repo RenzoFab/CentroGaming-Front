@@ -14,6 +14,7 @@ export class SerchBoxComponent implements OnInit {
   private debouncerSubscription?: Subscription;
   optionsVisible = false;
   options: Game[] = [];
+  onLoad: boolean = false;
 
   constructor(private router: Router, private gameService: GameService) {}
 
@@ -26,13 +27,16 @@ export class SerchBoxComponent implements OnInit {
   }
 
   onKeyPress(term: string) {
+    this.onLoad = true;
     this.debouncer.next(term);
   }
 
   onSearch(term: string) {
-    this.gameService
-      .getSuggestions(term)
-      .subscribe((games) => (this.options = games));
+    this.gameService.getSuggestions(term).subscribe((games) => {
+      if (games) return (this.options = games);
+      return (this.options = []);
+    });
+    setTimeout(() => (this.onLoad = false), 500);
   }
 
   onBlur() {

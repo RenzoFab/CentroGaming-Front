@@ -18,7 +18,9 @@ export class CartService {
 
   constructor(private http: HttpClient, private gameService: GameService) {
     this.loadCartFromLocalStorage();
-    this.gameService.getGames().subscribe((games) => (this._games = games));
+    this.gameService.getGames().subscribe((games) => {
+      if (games) this._games = games;
+    });
   }
 
   get cart(): Cart {

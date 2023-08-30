@@ -1,3 +1,3 @@
 export const environments = {
-  baseUrl: 'http://api',
+  baseUrl: 'https://centrogaming-back.onrender.com',
 };

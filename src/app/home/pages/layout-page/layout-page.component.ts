@@ -44,9 +44,11 @@ export class LayoutPageComponent implements OnInit {
 
   private getGamesData() {
     this.gameService.getGames().subscribe((games) => {
-      this.gameFav = this.getGameFav(games, 'starfield');
-      this.gamesTrend = this.getTrendingGames(games);
-      this.gamesActual = this.getNewestGames(games, 9);
+      if (games) {
+        this.gameFav = this.getGameFav(games, 'starfield');
+        this.gamesTrend = this.getTrendingGames(games);
+        this.gamesActual = this.getNewestGames(games, 6);
+      }
     });
   }
 }

@@ -12,6 +12,8 @@ export class ListPageComponent implements OnInit {
   constructor(private gameService: GameService) {}
 
   ngOnInit(): void {
-    this.gameService.getGames().subscribe((games) => (this.games = games));
+    this.gameService.getGames().subscribe((games) => {
+      if (games) this.games = games;
+    });
   }
 }

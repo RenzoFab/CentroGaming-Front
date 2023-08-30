@@ -1,14 +1,14 @@
 <ng-container *ngIf="game">
   <div class="game-image">
     <shared-lazy-image
-      [image]="game | gameImage"
+      [image]="game.img"
       [name]="game.name"
     ></shared-lazy-image>
   </div>
   <div class="container">
     <div class="row game-sale pad-50">
       <div class="col-7 h-100">
-        <shared-lazy-image [image]="game | gameLogo" [name]="game.name">
+        <shared-lazy-image [image]="game.logo" [name]="game.name">
         </shared-lazy-image>
       </div>
 
